@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RecycleMe</string>
+    <string name="menu_favoris">favoris</string>
+    <string name="menu_home">home</string>
+</resources>
