@@ -11,7 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-import romain.com.recycleme.fragment.FavorisFragment;
+import romain.com.recycleme.fragment.ListRecetteFragment;
 import romain.com.recycleme.fragment.HomeFragment;
 import romain.com.recycleme.view.SwipableViewPager;
 
@@ -19,6 +19,10 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
 
     public SwipableViewPager viewPager;
     private TabLayout tabLayout;
+    private int[] tabIcons = {
+            R.drawable.home,
+            R.drawable.like
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
 
         final ArrayList<Fragment> fragments = new ArrayList<>();
         fragments.add(new HomeFragment());
-        fragments.add(new FavorisFragment());
+        fragments.add(setBundleNameToFragment(getResources().getString(R.string.list_name_recette_fav)));
 
         FragmentStatePagerAdapter adpater = new FragmentStatePagerAdapter(getSupportFragmentManager()) {
             @Override
@@ -46,21 +50,16 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
                 return fragments.size();
             }
 
-            @NonNull
-            @Override
-            public CharSequence getPageTitle(int position) {
-                switch(position){
-                    case 0:
-                        return "home";
-                    case 1:
-                        return "favoris";
-                    default:
-                        return "";
-                }
-            }
+
         };
         viewPager.setAdapter(adpater);
         tabLayout.setupWithViewPager(viewPager);
+        setupTabIcons();
+    }
+
+    private void setupTabIcons() {
+        tabLayout.getTabAt(0).setIcon(tabIcons[0]);
+        tabLayout.getTabAt(1).setIcon(tabIcons[1]);
     }
 
     @Override
@@ -93,6 +92,7 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         }
     }
 
+
     @Override
     public void onTabUnselected(TabLayout.Tab tab) {
 
@@ -101,5 +101,13 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
     @Override
     public void onTabReselected(TabLayout.Tab tab) {
 
+    }
+
+    public ListRecetteFragment setBundleNameToFragment(String listName){
+        ListRecetteFragment listRecetteFragment = new ListRecetteFragment();
+        Bundle bundleFragment = new Bundle();
+        bundleFragment.putString("name", listName);
+        listRecetteFragment.setArguments(bundleFragment);
+        return listRecetteFragment;
     }
 }

@@ -4,8 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    android:background="@color/colorWhite"
-    android:id="@+id/begin_linear_layout">
+    android:id="@+id/home_linear_layout">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,9 +21,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/capriola"
             android:text="@string/app_name"
-            android:textSize="40sp"
-            android:textColor="@color/colorPrimaryDark"/>
+            android:textColor="@color/colorWhite"
+            android:textSize="40sp" />
 
         <Space
             android:layout_width="match_parent"
@@ -32,13 +32,14 @@
             android:layout_weight="1"/>
 
         <EditText
-            android:id="@+id/ipac_game_main_number"
+            android:id="@+id/search_recette_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Taper un nom de recette"
+            android:textColorHint="#80FFFFFF"
             android:inputType="text"
             android:gravity="center"
-            android:textColor="@color/colorPrimaryDark"/>
+            android:textColor="@color/colorWhite"/>
 
         <Button
             android:id="@+id/btn_search_recette"
@@ -46,10 +47,10 @@
             android:layout_height="wrap_content"
             android:text="Chercher une recette"
             android:layout_marginBottom="20dp"
-            android:background="@color/colorPrimaryDark"
+            android:background="@drawable/btn_rounded"
             android:textColor="@color/colorWhite"
             android:layout_marginStart="40dp"
-            android:layout_marginEnd="40dp"/>
+            android:layout_marginEnd="40dp" />
 
         <Space
             android:layout_width="match_parent"
@@ -59,9 +60,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ou"
-            android:textSize="30sp"
-            android:textColor="@color/colorPrimaryDark"/>
+            android:fontFamily="@font/capriola"
+            android:text="OU"
+            android:textSize="40sp"
+            android:textColor="@color/colorAccent"/>
 
         <Space
             android:layout_width="match_parent"
@@ -72,8 +74,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ajouter mes ingrédients"
+            android:fontFamily="@font/capriola"
             android:textSize="30sp"
-            android:textColor="@color/colorPrimaryDark"/>
+            android:textColor="@color/colorWhite"/>
 
         <Space
             android:layout_width="match_parent"
@@ -84,8 +87,7 @@
             android:id="@+id/recycler_view_ingredients"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scrollbars="vertical"
-            />
+            android:scrollbars="vertical" />
 
         <Space
             android:layout_width="match_parent"
@@ -93,12 +95,23 @@
             android:layout_weight="1"/>
 
         <Button
+            android:id="@+id/btn_add_ingredient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ajouter un ingrédients"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/btn_white_rounded"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"/>
+
+        <Button
             android:id="@+id/btn_search_recette_ingredient"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Voir les recettes"
             android:layout_marginBottom="20dp"
-            android:background="@color/colorPrimaryDark"
+            android:background="@drawable/btn_rounded"
             android:textColor="@color/colorWhite"
             android:layout_marginStart="40dp"
             android:layout_marginEnd="40dp"/>
@@ -109,7 +122,5 @@
             android:layout_weight="1"/>
 
     </LinearLayout>
-
-
 
 </RelativeLayout>

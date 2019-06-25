@@ -2,4 +2,8 @@
     <string name="app_name">RecycleMe</string>
     <string name="menu_favoris">favoris</string>
     <string name="menu_home">home</string>
+
+    <string name="list_name_recette_fav">Mes Favoris</string>
+    <string name="list_name_recette_name">Mes recettes (par nom)</string>
+    <string name="list_name_recette_ing">Mes recettes</string>
 </resources>

@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "tarte-citron-meringue",
+    "picture": "picture1.png",
+    "preparation": "Plein de chose sur la préparation",
+    "ingredients": ["citron", "meringue"]
+  },
+  {
+    "id": 2,
+    "name": "tajine-de-poulet",
+    "picture": "picture2.png",
+    "preparation": "Plein de chose sur la préparation",
+    "ingredients": ["poulet", "merguez"]
+  },
+  {
+    "id": 3,
+    "name": "cake-jambon-olive",
+    "picture": "picture3.png",
+    "preparation": "Plein de chose sur la préparation",
+    "ingredients": ["jambon", "olive"]
+  },
+  {
+    "id": 4,
+    "name": "saumon-echalotte",
+    "picture": "picture4.png",
+    "preparation": "Plein de chose sur la préparation",
+    "ingredients": ["saumon", "echalotte"]
+  }
+]
